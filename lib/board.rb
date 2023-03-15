@@ -11,7 +11,9 @@ class Board
 
   def knight_moves(pos, dest)
     dest = find_path(pos, dest)
-    p get_history(pos, dest)
+    history = get_history(pos, dest)
+    puts "You made it in #{history.length - 1} move(s)! here's your path:"
+    history.each { |move| p move }
   end
 
   private
